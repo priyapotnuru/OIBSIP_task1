@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website  landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2> <a href="a" class="logo">Logo</a></h2>
+            <div class ="navigation">
+                <a href="a">Home</a>
+                <a href="a">About</a>
+                <a href="a">Info</a>
+                <a href="a">services</a>
+                <a href="a">Contact</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="Info">
+                <h2>Like Nature<br><span>Be Creative!</span></h2>
+                <p>Creativity is the fundamental nature of the universe, the process of creation itself, rather the spark of an occasional (C)creator, and is therefore a basic “everyday, everyone, everywhere” human capacity. (b) Creativity is a networked, ecological, and relational process rather than an isolated phenomenon.
+                    Spending time in nature also inspires a sense of awe. This feeling that the world is so much bigger than you can comprehend leads to “expansive thinking,” which allows us to consider different perspectives and can lead to innovative ideas.
+                </p>
+                <a href ="a" class="Info-btn">More Info</a>
+            </div>
+            <div class="media-icons">
+                <a href="a"><i class="fab fa-facebook-f"></i></a>
+                <a href="a"><i class="fab fa-twitter"></i></a>
+                <a href="a"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
